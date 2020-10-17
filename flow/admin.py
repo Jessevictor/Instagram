@@ -3,4 +3,4 @@ from flow.models import instagram, Caption
 
 # Register your models here.
 admin.site.register(instagram)
-admin.site.regester(Caption)
+admin.site.register(Caption)
