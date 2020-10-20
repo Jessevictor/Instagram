@@ -1,53 +1,37 @@
 from django.db import models
+from django.contrib.auth .models import User
 
-# Create your models here.
-class instagram(models.Model):
-    image = models.ImageField(upload_to ='images')
-    imageName = models.CharField(max_length=200)
-    imageCaption = models.CharField( max_length=50);
+class Image(models.Model):
+    image_name = models.CharField(max_length=30)
+    image = models.ImageField(upload_to = 'posts/')
+    image_caption = models.TextField()
+    image_poster = models.ForeignKey(User, on_delete=models.CASCADE, default = '', null = True)
 
 
     @classmethod
     def all_images(cls):
-        my_image = cls.objects.all()
-        return my_image
+        all_posts = cls.objects.all()
+        # print(all_posts)
+        return all_posts
 
-    @classmethod
-    def search_by_category(cls, search_term):
-        my_image = cls.objects.filter(imageName__icontains=search_term)
-        return my_image
-
-    def __str__(self):
-        return self.imageName
-
-    def save_gallery(self):
+    def save_images(self):
         self.save()
     
-    def delete(self):
+    def __str__(self):
+        return self.image_name
+
+
+class Profile(models.Model):
+    name = models.CharField(max_length=30)
+    bio = models.TextField()
+    Profile_photo = models.ImageField(upload_to = 'posts/')
+    user = models.OneToOneField(User, on_delete= models.CASCADE)
+
+    def save_prof(self):
+        self.save()
+
+    def delete_prof(self):
         self.delete()
 
 
-class Caption(models.Model):
-    caption_name= models.CharField(max_length=200)
 
-    def __str__(self):
-        return self.location_name
-
-    def save_location(self):
-        self.save()
-    def delete(self):
-        self.delete()
-    
-    
-
-
-class Name(models.Model):
-    name_name = models.CharField(max_length=200)
-
-    def __str__(self):
-        return self.category_name
-
-    def save_Category(self):
-        self.save()
-    def delete(self):
-        self.delete()
