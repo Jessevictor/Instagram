@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% load bootstrap3 %}
+{% block content %}
+<h1>
+	Username:{{user.username}}
+</h1>
+		
+		Email:{{user.email}}
+		Profile Pic:{{user.profile.profile_photo}}
+{% endblock %}
