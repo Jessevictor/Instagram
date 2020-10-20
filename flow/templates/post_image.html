@@ -1,0 +1,18 @@
+{%extends 'base.html'%} 
+{% load bootstrap3 %}
+<!-- Some content here-->
+
+<!-- Looping through news end   -->
+{% block content %}
+<div class="container-fluid">
+    WAPI FORM?????
+
+  <form  action="{%url 'post_image'%}" method="post" enctype="multipart/form-data">
+    {%csrf_token%}
+
+    {% bootstrap_form form %}
+    <input type="submit" class="btn btn-info" value="Post">
+  </form>
+
+</div>
+{% endblock %}
