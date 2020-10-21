@@ -39,10 +39,7 @@ You'll need to create a new postgress database, Type the following command to ac
 
 ```
 create database instagram
-```
-
-## Database diagram
-
+``
 
 ## Install dependencies
 To install the requirements from requirements.txt file,
