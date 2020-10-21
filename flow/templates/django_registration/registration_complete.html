@@ -1,0 +1,15 @@
+
+
+{%extends 'base.html' %}
+
+    {% block content %}
+    {{block.super}}
+    <h> You're logged out </h>
+    <div class="container">
+        <small class="text-muted">
+            <a href="{%url 'index'%}" class="btn btn-success">Start Now Bro</a>
+            <a href="{% url 'login' %}" class="ml-2 pt-9"> Log in again </a>
+        </small>
+    </div>
+    {% endblock %}
+    

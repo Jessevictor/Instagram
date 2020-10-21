@@ -5,7 +5,7 @@
 <!-- Looping through news end   -->
 {% block content %}
 <div class="container-fluid">
-    WAPI FORM?????
+  <div class="col-md-6" style="margin-left: 300px;">
 
   <form  action="{%url 'post_image'%}" method="post" enctype="multipart/form-data">
     {%csrf_token%}
@@ -13,6 +13,6 @@
     {% bootstrap_form form %}
     <input type="submit" class="btn btn-info" value="Post">
   </form>
-
+</div>
 </div>
 {% endblock %}
