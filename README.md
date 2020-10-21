@@ -42,7 +42,7 @@ create database instagram
 ```
 
 ## Database diagram
-https://dbdiagram.io/d/5e54c2c6ef8c251a0618867f
+
 
 ## Install dependencies
 To install the requirements from requirements.txt file,
