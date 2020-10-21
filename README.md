@@ -5,7 +5,7 @@ A clone of the Instagram app.
 Clone the the repository by running
 
 ```
-git clone https://github.com/monicaoyugi/Instagram
+git clone https://github.com/Jessevictor/Instagram.git
 or download a zip file of the project from github then unzip.
 ```
 
