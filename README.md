@@ -66,6 +66,7 @@ To run the application on your development machine,
 ```
 python3 manage.py runserver
 ```
+```
 ## Running Tests
 To run tests
 
