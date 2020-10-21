@@ -39,7 +39,7 @@ You'll need to create a new postgress database, Type the following command to ac
 
 ```
 create database instagram
-``
+```
 
 ## Install dependencies
 To install the requirements from requirements.txt file,
@@ -65,7 +65,6 @@ To run the application on your development machine,
 
 ```
 python3 manage.py runserver
-```
 ```
 ## Running Tests
 To run tests
